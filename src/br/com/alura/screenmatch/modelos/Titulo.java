@@ -41,11 +41,7 @@ public class Titulo {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-
-
-
-
-
-
-
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
 }

@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -10,6 +11,7 @@ public class Principal {
        meuFilme.setNome("O poderoso chefão");
        meuFilme.setAnoDeLancamento(1970);
        meuFilme.setDuracaoEmMinutos(180);
+       System.out.println("a duracao" + meuFilme.getDuracaoEmMinutos());
 
        meuFilme.exibeFichaTecnica();
        meuFilme.avalia(8);
@@ -26,6 +28,18 @@ public class Principal {
        lost.exibeFichaTecnica();
        lost.setTemporadas(10);
        lost.setEpisodiosPorTemporada(10);
+       lost.setMinutosPorEpisodio(50);
+       System.out.println("Duração para maratornar lost " + lost.getDuracaoEmMinutos());
 
+       Filme OutroFilme = new Filme();
+       OutroFilme.setNome("Avatar");
+       OutroFilme.setAnoDeLancamento(2023);
+       OutroFilme.setDuracaoEmMinutos(200);
+
+       CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+       calculadora.inclui(meuFilme);
+       calculadora.inclui(OutroFilme);
+       calculadora.inclui(lost);
+       System.out.println(calculadora.getTempTotal());
     }
 }
