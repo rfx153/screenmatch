@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+#git status
+#git add.
+#git push origin2 main
