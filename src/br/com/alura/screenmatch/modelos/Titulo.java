@@ -44,4 +44,8 @@ public class Titulo {
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
     }
+
+    public String getNome() {
+        return nome;
+    }
 }
