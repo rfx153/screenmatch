@@ -48,4 +48,8 @@ public class Titulo {
     public String getNome() {
         return nome;
     }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
 }
