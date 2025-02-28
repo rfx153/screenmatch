@@ -11,9 +11,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-       Filme meuFilme = new Filme();
-       meuFilme.setNome("O poderoso chefão");
-       meuFilme.setAnoDeLancamento(1970);
+       Filme meuFilme = new Filme("O poderoso chefão", 1970);
        meuFilme.setDuracaoEmMinutos(180);
        System.out.println("a duracao" + meuFilme.getDuracaoEmMinutos());
 
@@ -26,18 +24,14 @@ public class Principal {
         //System.out.println(meuFilme.somaDasAvaliacoes);
         //System.out.println(meuFilme.totalDeAvaliacoes);
         //System.out.println(meuFilme.pegaMedia());
-       Serie lost = new Serie();
-       lost.setNome("Lost");
-       lost.setAnoDeLancamento(2000);
+       Serie lost = new Serie("Lost", 2000);
        lost.exibeFichaTecnica();
        lost.setTemporadas(10);
        lost.setEpisodiosPorTemporada(10);
        lost.setMinutosPorEpisodio(50);
        System.out.println("Duração para maratornar lost " + lost.getDuracaoEmMinutos());
 
-       Filme OutroFilme = new Filme();
-       OutroFilme.setNome("Avatar");
-       OutroFilme.setAnoDeLancamento(2023);
+       Filme OutroFilme = new Filme("Avatar", 2023);
        OutroFilme.setDuracaoEmMinutos(200);
 
        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -55,9 +49,8 @@ public class Principal {
        episodio.setTotalVisualizacoes(300);
        filtro.filtra(episodio);
 
-       var filmeDoPaulo = new Filme();
-       filmeDoPaulo.setNome("Dogville");
-       filmeDoPaulo.setAnoDeLancamento(2003);
+       var filmeDoPaulo = new Filme("Dogville", 2003);
+       //filmeDoPaulo.setNome("Dogville");
        filmeDoPaulo.avalia(10);
 
        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -67,6 +60,8 @@ public class Principal {
        System.out.println("Tamanho da lista " + listaDeFilmes.size());
        System.out.println("primeiro filme " + listaDeFilmes.get(0).getNome());
        System.out.println("to string do filme " + listaDeFilmes.get(0).toString());
+
+
 
 
     }
